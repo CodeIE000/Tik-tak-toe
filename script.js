@@ -2,14 +2,11 @@ const cells = document.querySelectorAll('.cell');
 const message = document.querySelector('#message');
 const reset = document.querySelector('#reset');
 const winningConditions = [
-    [0, 1, 2],
     [3, 4, 5],
-    [6, 7, 8],
-    [0, 3, 6],
     [1, 4, 7],
-    [2, 5, 8],
     [0, 4, 8],
     [2, 4, 6],
+    [0, 2, 6, 8]
 ];
 let options = ["", "", "", "", "", "", "", "", "",];
 let currentPlayer = 'X';
@@ -51,11 +48,12 @@ function checkWinner() {
         const cellA = options[condition[0]];
         const cellB = options[condition[1]];
         const cellC = options[condition[2]];
+        const cellD = options[condition[3]];
         
-        if (cellA == "" || cellB == "" || cellC == "") {
+        if (cellA == "" || cellB == "" || cellC == "" || cellD == "") {
             continue;
         }
-        if (cellA == cellB && cellB == cellC) {
+        if (cellA == cellB && cellB == cellC && cellC == cellD || (cellA == cellB && cellB == cellC)) {
             roundWon = true;
             break;
         }
