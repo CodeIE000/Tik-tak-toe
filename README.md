@@ -2,7 +2,7 @@
 
 This is the code repository for a modified version of the classic Tic-Tak-Toe game. The core gameplay remains the same: two players take turns marking a grid with X's and O's, aiming to achieve a winning line of three. However, this version introduces a twist on the traditional winning patterns, making for a more strategic and challenging experience.
 
-### ❗Note: The codebase used in this project is a combination of my own modifications and references from YouTube tutorials. 
+### ❗Note: The codebase used in this project is a combination of reference from a YouTube tutorial and my own modifications. 
 
 ## What's Included:
 
