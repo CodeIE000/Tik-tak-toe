@@ -8,6 +8,7 @@ const winningConditions = [
     [2, 4, 6],
     [0, 2, 6, 8]
 ];
+
 let options = ["", "", "", "", "", "", "", "", "",];
 let currentPlayer = 'X';
 let running = false;
@@ -62,6 +63,11 @@ function checkWinner() {
     if (roundWon) {
         message.textContent = `${currentPlayer} wins!`;
         running = false;
+        const cellsToChange = [condition[0], condition[1], condition[2]]; // Modify for 4 cell wins
+      cellsToChange.forEach(cellIndex => {
+        const cell = cells[cellIndex];
+        cell.style.backgroundColor = 'green'; // Set background color to green
+      });
     } else if (!options.includes("")) {
         message.textContent = `Draw!`;
     } else {
